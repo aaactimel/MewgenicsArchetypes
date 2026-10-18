@@ -1,0 +1,58 @@
+/* stat icons */
+.int::before {
+    content: "";
+    display: inline-block;
+    width: 1.5em;
+    height: 1.4em;
+    margin-right: 0.2em;
+    vertical-align: -0.5em;
+    background-image: url('stats-icons/int.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.str::before {
+    content: "";
+    display: inline-block;
+    width: 1.5em;
+    height: 1.4em;
+    margin-right: 0.2em;
+    vertical-align: -0.5em;
+    background-image: url('stats-icons/str.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.spd::before {
+    content: "";
+    display: inline-block;
+    width: 1.5em;
+    height: 1.3em;
+    margin-right: 0.2em;
+    vertical-align: -0.3em;
+    background-image: url('stats-icons/spd.svg');
+}
+
+
+.stup::before {
+    content: "";
+    display: inline-block;
+    width: 1.5em;
+    height: 1.4em;
+    margin-right: 0.2em;
+    vertical-align: -0.4em;
+    background-image: url('stats-icons/statsup.svg');
+}
+
+/* class icons */
+.fighter::before {
+    content: "";
+    display: inline-block;
+    width: 1.0em;
+    height: 1.4em;
+    margin-right: 0.2em;
+    vertical-align: -0.35em;
+    background-image: url('class-icons/fighter.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stats.css">
+    <script src="script.js" defer></script>
+    <title>Mewgenics | ЧАВО?</title>
+</head>
+<body>
+    <header>
+        <h2 style="text-align: left; position: absolute; top: 0; left: 10;"><a href="index.html">Вернуться на главную</a></h2>
+        <h1>ЧАВО?</h1>
+    </header>   
+    <div class="question">
+        <h2 class="nobottom">Что такое архетипы?</h2>
+        <p>Архетипы — это условное разделение котов на подклассы в зависимости от их скиллов. Архетипы ничего не меняют в игре, но могут помочь определить вокруг чего строить билд.</p>
+        <p>Можно собрать кота, что не будет следовать никакому из архетипов, однако это вряд-ли будет эффективно - намного выгоднее будет выбрать один из существующих вариантов.</p>
+    </div> 
+    <div class="question">
+        <h2 class="nobottom">Как выбрать архетип?</h2>
+        <p>Архетипы нигде не выбираются внутри игры. Они определяются исходя из скиллов кота.</p>
+        <p>Например, если у 
+        <span class="tooltip"
+        data-type="class"
+        data-title="<span class='fighter'>Воин</span>"
+        data-text="+2 <span class='str'></span> +1 <span class='spd'></span> -1 <span class='int'></span>"
+        data-image="class-cats/fightercat.webp" class="skill-icon"><span class="fighter">Воина</span></span> есть пассивка <span class="tooltip fighter-skill"
+        
+        data-type="passive"
+        data-title="<span class='fighter-skill'>Тупые мускулы</span>"
+        data-text="Теряешь -1 <span class='int'></span>при каждом получении урона. Если у тебя 4 или меньше <span class='int'></span>, получаешь +2 <span class='str'></span> и твои атаки накладывают Синяки. На 0 <span class='int'></span>, получаешь +100% к шансу крита."
+        data-image="https://mewgenics.wiki.gg/images/ABILITY_Dumb_Muscle.svg?1cbcaa" class="skill-icon">
+        Тупые мускулы</span>, то стоит задуматься о том, чтобы собрать билд ориентированый на тупость.</p>
+    </div> 
+    <div class="question">
+        <h2 class="nobottom">Мне не везёт со скиллами - не могу собрать кота</h2>
+        <p>Что-ж, жизнь есть жизнь! В Mewgenics никто никогда не знает что соберёт.</p>
+        <p>Если не везёт уж слишком часто, а к модам нету презрения, можно поставить <a href="https://www.nexusmods.com/mewgenics/mods/31?tab=files" class="">Reroll Level ups</a>. Но это по-секрету.</p>
+    </div>
+
+    <div class="tooltip-box">
+        <h3 id="tooltip-title"></h3>
+        <p id="tooltip-text"></p>
+        <img id="tooltip-image" src="" alt="">
+    </div>
+</body>
+
+</html>

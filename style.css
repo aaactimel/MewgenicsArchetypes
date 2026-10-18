@@ -1,0 +1,303 @@
+@font-face {
+  font-family:Mewgenics;
+  src:url(Edmund.ttf) format("truetype");
+  font-style:normal;
+  font-weight:400 900;
+  font-display:block
+}
+
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.class {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.class:hover {
+    transform: scale(1.01);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+    opacity: 1;
+    box-shadow: 0 0 20px var(--glow);
+}
+
+
+.class img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.class-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.class-text h2,
+.class-text p {
+    text-align: left;
+    margin: 0;
+}
+
+@media (max-width: 800px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.panel {
+    border: 3.5px solid #000;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f0f0f0;
+}
+
+/* Jester */
+.jester {
+    background: linear-gradient(
+        90deg,
+        #F0F5FF 0%,
+        #F0FFF4 33.33%,
+        #FFF0F0 66.67%,
+        #F0F5FF 100%
+    );
+
+    background-size: 1200px 100%;
+    background-repeat: repeat;
+
+    animation: gradientMove 10s linear infinite;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+.jester:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 25px rgba(209, 255, 2, 0.2);
+}
+
+@keyframes gradientMove {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -1200px 0;
+    }
+}
+
+h1 {
+    font-family: "Mewgenics", sans-serif;
+    font-size: 6rem;
+    text-align: center;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.nobottom {
+    margin-bottom: 0px;
+}
+
+h2 {
+    font-family: "Mewgenics", sans-serif;
+    font-size: 2.45rem;
+    text-align: center;
+    margin-top: 0px;
+}
+
+h3 {
+    font-family: "Mewgenics", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 0px;
+}
+
+p {
+    font-family: "Mewgenics", sans-serif;
+    font-size: 1.60rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #5e5e5e;
+}
+
+.inline-icon {
+    display: inline;
+    width: 1.5rem;
+    height: 1.7rem;
+}
+
+.hoverable {
+    transition: all 0.2s ease-in-out;
+}
+
+.hoverable:hover {
+    transform: translateY(-2%);
+    transition: all 0.1s ease-in-out;
+}
+
+a {
+    color: #000;
+    text-decoration: underline solid;
+    transition: all 0.1s ease-in-out;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* colors */
+.fighter { color: rgb(175, 100, 100) }
+.fighter-skill { color: rgb(220, 145, 145) }
+
+.tooltip {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+/* Tooltip Box Styles */
+.tooltip-box {
+    position: fixed;
+
+    box-sizing:border-box;
+    width: 45rem;
+    padding: 25px;
+
+    background: #222;
+    color: white;
+
+    border: 6px solid white;
+
+    display: grid;
+    grid-template-columns: 30% 70%;
+    z-index: 9999;
+
+    transition: opacity ease-in-out 0.06s;
+    opacity: 0;
+}
+.tooltip-box-class {
+    width: 25rem;
+    grid-column: 1 / -1;
+    text-align: center;
+}
+.tooltip-box-status {
+    width: 17rem;
+    grid-column: 1 / -1;
+    text-align: center;
+    grid-template-columns: 20% 80%;
+}
+.tooltip-box-generic {
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    height: var(--height);
+}
+
+/* Tooltip Box Text */
+.tooltip-box h3 {
+    grid-column: 1 / -1;
+
+    font-family: "Mewgenics", sans-serif;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: -15px;
+    margin-bottom: 0px;
+    
+}
+
+.tooltip-box p {
+    grid-column: 2;
+
+    font-family: "Mewgenics", sans-serif;
+    font-size: 1.2rem;
+    text-align: right;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    margin: 0;
+    margin-left: 10px;
+    color: #fbfbfb;
+}
+
+.tooltip-box-generic p {
+    font-family: "Mewgenics", sans-serif;
+    font-size: 1.1rem;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin-bottom: -10px;
+    margin-left: 0px;
+    color: #fbfbfb;
+}
+
+/* Tooltip Box Images */
+.tooltip-box-passive img {
+    grid-column: 1;
+    grid-row: 2;
+
+    width: 100%;
+    height: auto;
+
+    justify-self: center;
+    align-self: center;
+    border-color: #555;
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 4px;
+}
+
+.tooltip-box-class img {
+    grid-column: 1;
+    grid-row: 2;
+
+    width: 120%;
+    height: auto;
+
+    justify-self: center;
+    align-self: center;
+}
+
+.tooltip-box-status img {
+    grid-column: 1;
+    grid-row: 2;
+
+    width: 100%;
+    height: auto;
+
+    justify-self: center;
+    align-self: center;
+}
+
+/* Tooltip Box Other */
+.tooltip-box-passive:has(#tooltip-title .fighter-skill) #tooltip-image {
+    border-color: rgb(175, 100, 100);
+}
+
+/* Version label */
+.game-version {
+    font-size: 0.95rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
